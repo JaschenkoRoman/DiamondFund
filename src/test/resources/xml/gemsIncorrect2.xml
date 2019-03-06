@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gns:gems xmlns:gns="http://epam.com/gems"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="gems.xsd">
+    <gns:gem name="beryl">
+        <gns:origin>RSA</gns:origin>
+        <gns:value>5</gns:value>
+        <gns:clarity>90</gns:clarity>
+    </gns:gem>
+    <gns:colourless-gem name="topaz">
+        <gns:origin>Brazil</gns:origin>
+        <gns:value>8</gns:value>
+        <gns:clarity>80</gns:clarity>
+    </gns:colourless-gem>
+    <gns:colourful-gem name="rubin">
+        <gns:origin>India</gns:origin>
+        <gns:value>7</gns:value>
+        <gns:colour>Red</gns:colour>
+    </gns:colourful-gem>
+    <gns:colourful-gem name="jasper">
+        <gns:origin>Russia</gns:origin>
+        <gns:value>11</gns:value>
+        <gns:colour>Brown</gns:colour>
+    </gns:colourful-gem>
+</gns:gems>

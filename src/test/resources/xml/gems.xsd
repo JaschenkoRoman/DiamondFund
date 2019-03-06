@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://epam.com/gems"  targetNamespace="http://epam.com/gems">
+    <element name="gem" type="tns:Gem" abstract="true"/>
+    <element name="colourless-gem" type="tns:Colourless-gem" substitutionGroup="tns:gem"/>
+    <element name="colourful-gem" type="tns:Colourful-gem" substitutionGroup="tns:gem"/>
+    <element name="gems">
+        <complexType>
+          <sequence>
+              <element ref="tns:gem"
+                       minOccurs="2"
+                       maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+    <complexType name="Gem">
+        <sequence>
+            <element name="origin" type="string"/>
+            <element name="value" type="positiveInteger"/>
+        </sequence>
+        <attribute name="name" type="string" use="required"/>
+    </complexType>
+    <complexType name="Colourless-gem">
+        <complexContent>
+            <extension base="tns:Gem">
+                <sequence>
+                    <element name="clarity" type="positiveInteger"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Colourful-gem">
+        <complexContent>
+            <extension base="tns:Gem">
+                <sequence>
+                    <element name="colour" type="tns:Colour"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <simpleType name="Colour">
+        <restriction base="string">
+            <enumeration value="Black"/>
+            <enumeration value="Blue"/>
+            <enumeration value="Brown"/>
+            <enumeration value="Green"/>
+            <enumeration value="Orange"/>
+            <enumeration value="Pink"/>
+            <enumeration value="Purple"/>
+            <enumeration value="Red"/>
+            <enumeration value="White"/>
+            <enumeration value="Yellow"/>
+        </restriction>
+    </simpleType>
+
+
+</schema>
